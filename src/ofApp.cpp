@@ -1,9 +1,14 @@
 #include "ofApp.h"
 
+int x = 0;
+int y = 0;
+
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofBackground(0);
 	ofSetCircleResolution(100);
+	x = ofGetWidth() / 2;
+	y = ofGetHeight() / 2;
 }
 
 //--------------------------------------------------------------
@@ -14,7 +19,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 	ofSetColor(255, 0, 0);
-	ofDrawCircle(ofGetWidth() / 2, ofGetHeight() / 2, 50);
+	ofDrawCircle(x, y, 15);
 }
 
 //--------------------------------------------------------------
