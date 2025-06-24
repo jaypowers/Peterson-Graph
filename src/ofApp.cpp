@@ -2,6 +2,8 @@
 
 int x = 0;
 int y = 0;
+int offsetX = 0;
+int offsetY = 0;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -9,6 +11,9 @@ void ofApp::setup(){
 	ofSetCircleResolution(100);
 	x = ofGetWidth() / 2;
 	y = ofGetHeight() / 2;
+
+	offsetX = 100 + x;
+	offsetY = 100 + y;
 }
 
 //--------------------------------------------------------------
@@ -20,6 +25,8 @@ void ofApp::update(){
 void ofApp::draw(){
 	ofSetColor(255, 0, 0);
 	ofDrawCircle(x, y, 15);
+
+	ofDrawCircle(offsetX, offsetY, 15);
 }
 
 //--------------------------------------------------------------
